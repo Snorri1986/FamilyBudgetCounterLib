@@ -6,7 +6,7 @@ int showGreetingMessage();
 char * getIncomeGrapthics(double *incomeValues);
 // unit tests signatures
 void testShowGreetingMessage();
-char* testGetIncomeGrapthics(double* incomeValues);
+char* testGetIncomeGrapthics(double* incomeValues); // TODO: not finished
 
 const int dividerDKK = 100;
 
@@ -62,6 +62,7 @@ void testShowGreetingMessage() {
     }
 }
 
+// TODO: not finished
 char* testGetIncomeGrapthics(double* incomeValues) {
 
 }
