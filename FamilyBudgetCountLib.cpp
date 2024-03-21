@@ -6,6 +6,7 @@ int showGreetingMessage();
 char * getIncomeGrapthics(double *incomeValues);
 // unit tests signatures
 void testShowGreetingMessage();
+char* testGetIncomeGrapthics(double* incomeValues);
 
 const int dividerDKK = 100;
 
@@ -59,6 +60,10 @@ void testShowGreetingMessage() {
     {
         std::cout << "NOT PASSED" << std::endl;
     }
+}
+
+char* testGetIncomeGrapthics(double* incomeValues) {
+
 }
 
 
