@@ -6,7 +6,7 @@ int showGreetingMessage();
 char * getIncomeGrapthics(double *incomeValues);
 // unit tests signatures
 void testShowGreetingMessage();
-char* testGetIncomeGrapthics(double* incomeValues); // TODO: not finished
+void testGetIncomeGrapthics(); 
 
 const int dividerDKK = 100;
 
@@ -15,6 +15,10 @@ void main()
     std::cout << "Unit tests...." << std::endl;
     std::cout << "showGreetingMessage()....";
     testShowGreetingMessage();
+    std::cout << std::endl;
+    std::cout << "getIncomeGrapthics()....";
+    testGetIncomeGrapthics();
+    std::cout << std::endl;
     /* ------------------------------------------- */
     std::cout << "-------------------------------------------" << std::endl;
     showGreetingMessage();
@@ -38,9 +42,9 @@ char * getIncomeGrapthics(double *incomeValues) {
     }
     int countX = static_cast<int>(std::round(sum/dividerDKK));
     char* arrayIncomeX = new char[countX];
-    for (int i = 0; i <= sizeof(arrayIncomeX);i++) {
-        arrayIncomeX[i] = 'X';
-    }
+   for (int i = 0; i <= sizeof(arrayIncomeX);i++) {
+      arrayIncomeX[i] = 'X';
+   }
     return arrayIncomeX;
 }
 
@@ -62,9 +66,23 @@ void testShowGreetingMessage() {
     }
 }
 
-// TODO: not finished
-char* testGetIncomeGrapthics(double* incomeValues) {
-
+void testGetIncomeGrapthics() {
+    double * testArr = new double[5];
+    testArr[0] = 23.5;
+    testArr[1] = 1200.5;
+    testArr[2] = 2300.7;
+    testArr[3] = 2500.8;
+    testArr[4] = 2700.8;
+    double * ptr_testArr = testArr;
+    char * resultArray = getIncomeGrapthics(ptr_testArr);
+    char expected = 'X';
+    if (resultArray[0] == expected) {
+       std::cout << "PASSED" << std::endl;
+    }
+   else {
+      std::cout << "NOT PASSED" << std::endl;
+    }
+    delete[] testArr;
 }
 
 
