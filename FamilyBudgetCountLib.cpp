@@ -3,11 +3,11 @@
 
 // common tests signatures
 int showGreetingMessage();
-char * getIncomeGrapthics(double *incomeValues);
+char * getIncomeGraphics(double *incomeValues);
 void cleanMemory();
 // unit tests signatures
 void testShowGreetingMessage();
-void testGetIncomeGrapthics(); 
+void testGetIncomeGraphics(); 
 
 const int dividerDKK = 100;
 // global arrays
@@ -20,7 +20,7 @@ void main()
     testShowGreetingMessage();
     std::cout << std::endl;
     std::cout << "getIncomeGrapthics()....";
-    testGetIncomeGrapthics();
+    testGetIncomeGraphics();
     std::cout << std::endl;
     /* ------------------------------------------- */
     std::cout << "-------------------------------------------" << std::endl;
@@ -38,7 +38,7 @@ int showGreetingMessage() {
 }
 
 // get array of X for incomes
-char * getIncomeGrapthics(double *incomeValues) {
+char * getIncomeGraphics(double *incomeValues) {
     int arrLength = sizeof(incomeValues);
     double sum = 0;
     for (int i = 0;i <= arrLength;i++) {
@@ -52,7 +52,7 @@ char * getIncomeGrapthics(double *incomeValues) {
    return arrayIncomeX;
 }
 
-char* getMyGroceriesGrapthics(double* groceriesValues) {
+char* getMyGroceriesGraphics(double* groceriesValues) {
     int arrLength = sizeof(groceriesValues);
     double sum = 0;
     for (int i = 0;i <= arrLength;i++) {
@@ -68,6 +68,7 @@ char* getMyGroceriesGrapthics(double* groceriesValues) {
 
 void cleanMemory() {
     delete[] arrayIncomeX;
+    //delete[] arrayGroceriesX;
 }
 
 //TODO: add list of methods related with library
@@ -88,7 +89,7 @@ void testShowGreetingMessage() {
     }
 }
 
-void testGetIncomeGrapthics() {
+void testGetIncomeGraphics() {
     double * testArr = new double[5];
     testArr[0] = 23.5;
     testArr[1] = 1200.5;
@@ -96,7 +97,7 @@ void testGetIncomeGrapthics() {
     testArr[3] = 2500.8;
     testArr[4] = 2700.8;
     double * ptr_testArr = testArr;
-    char * resultArray = getIncomeGrapthics(ptr_testArr);
+    char * resultArray = getIncomeGraphics(ptr_testArr);
     char expected = 'X';
     if (resultArray[0] == expected) {
        std::cout << "PASSED" << std::endl;
