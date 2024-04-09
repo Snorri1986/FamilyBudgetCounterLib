@@ -8,14 +8,15 @@ char* getMyGroceriesGraphics(double* groceriesValues);
 void cleanMemory();
 // unit tests signatures
 void testShowGreetingMessage();
-void testGetIncomeGraphics(); 
+void testGetIncomeGraphics();
+void testGetMyGroceriesGraphics();
 
 const int dividerDKK = 100;
 // global arrays
 char* arrayIncomeX;
 char* arrayGroceriesX;
 
-void main()
+int main()
 {
     std::cout << "Unit tests...." << std::endl;
     std::cout << "showGreetingMessage()....";
@@ -24,11 +25,14 @@ void main()
     std::cout << "getIncomeGrapthics()....";
     testGetIncomeGraphics();
     std::cout << std::endl;
+    std::cout << "getMyGroceriesGraphics....";
+    testGetMyGroceriesGraphics();
     /* ------------------------------------------- */
     std::cout << "-------------------------------------------" << std::endl;
     showGreetingMessage();
     cleanMemory();
     system("pause>0");
+    return 0;
 }
 
 // return int value needs for unit tests
