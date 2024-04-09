@@ -4,11 +4,14 @@
 // common tests signatures
 int showGreetingMessage();
 char * getIncomeGrapthics(double *incomeValues);
+void cleanMemory();
 // unit tests signatures
 void testShowGreetingMessage();
 void testGetIncomeGrapthics(); 
 
 const int dividerDKK = 100;
+// global arrays
+char* arrayIncomeX;
 
 void main()
 {
@@ -22,6 +25,7 @@ void main()
     /* ------------------------------------------- */
     std::cout << "-------------------------------------------" << std::endl;
     showGreetingMessage();
+    cleanMemory();
     system("pause>0");
 }
 
@@ -41,11 +45,15 @@ char * getIncomeGrapthics(double *incomeValues) {
         sum += incomeValues[i];
     }
     int countX = static_cast<int>(std::round(sum/dividerDKK));
-    char* arrayIncomeX = new char[countX];
+    char* arrayIncomeX = new char[countX]; 
    for (int i = 0; i <= sizeof(arrayIncomeX);i++) {
       arrayIncomeX[i] = 'X';
    }
-    return arrayIncomeX;
+   return arrayIncomeX;
+}
+
+void cleanMemory() {
+    delete[] arrayIncomeX;
 }
 
 //TODO: add list of methods related with library
@@ -82,7 +90,7 @@ void testGetIncomeGrapthics() {
    else {
       std::cout << "NOT PASSED" << std::endl;
     }
-    delete[] testArr;
+    delete [] testArr;
 }
 
 
