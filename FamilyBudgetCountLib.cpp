@@ -52,6 +52,20 @@ char * getIncomeGrapthics(double *incomeValues) {
    return arrayIncomeX;
 }
 
+char* getMyGroceriesGrapthics(double* groceriesValues) {
+    int arrLength = sizeof(groceriesValues);
+    double sum = 0;
+    for (int i = 0;i <= arrLength;i++) {
+        sum += groceriesValues[i];
+    }
+    int countX = static_cast<int>(std::round(sum / dividerDKK));
+    char* arrayGroceriesX = new char[countX];
+    for (int i = 0; i <= sizeof(arrayGroceriesX);i++) {
+        arrayGroceriesX[i] = 'X';
+    }
+    return arrayGroceriesX;
+}
+
 void cleanMemory() {
     delete[] arrayIncomeX;
 }
