@@ -110,5 +110,24 @@ void testGetIncomeGraphics() {
     delete [] testArr;
 }
 
+void testGetMyGroceriesGraphics() {
+    double* testArr = new double[5];
+    testArr[0] = 23.5;
+    testArr[1] = 1200.5;
+    testArr[2] = 2300.7;
+    testArr[3] = 2500.8;
+    testArr[4] = 2700.8;
+    double* ptr_testArr = testArr;
+    char* resultArray = getMyGroceriesGraphics(ptr_testArr);
+    char expected = 'X';
+    if (resultArray[0] == expected) {
+        std::cout << "PASSED" << std::endl;
+    }
+    else {
+        std::cout << "NOT PASSED" << std::endl;
+    }
+    delete[] testArr;
+}
+
 
 
