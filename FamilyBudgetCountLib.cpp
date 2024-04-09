@@ -12,6 +12,7 @@ void testGetIncomeGraphics();
 const int dividerDKK = 100;
 // global arrays
 char* arrayIncomeX;
+char* arrayGroceriesX;
 
 void main()
 {
@@ -68,7 +69,7 @@ char* getMyGroceriesGraphics(double* groceriesValues) {
 
 void cleanMemory() {
     delete[] arrayIncomeX;
-    //delete[] arrayGroceriesX;
+    delete[] arrayGroceriesX;
 }
 
 //TODO: add list of methods related with library
