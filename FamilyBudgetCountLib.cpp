@@ -4,6 +4,7 @@
 // common tests signatures
 int showGreetingMessage();
 char * getIncomeGraphics(double *incomeValues);
+char* getMyGroceriesGraphics(double* groceriesValues);
 void cleanMemory();
 // unit tests signatures
 void testShowGreetingMessage();
