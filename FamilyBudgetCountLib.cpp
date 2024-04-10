@@ -17,6 +17,7 @@ void testGetMyGroceriesGraphics();
 void testGetMyHousingGraphics();
 void testGetMyTravellingGraphics();
 void testGetMyEntertainmentGraphics();
+void testGetMyHealthGraphics();
 
 const int dividerDKK = 100;
 // global arrays
@@ -47,6 +48,9 @@ int main()
     std::cout << std::endl;
     std::cout << "getMyEntertainmentGraphics()....";
     testGetMyEntertainmentGraphics();
+    std::cout << std::endl;
+    std::cout << "getMyHealthGraphics()....";
+    testGetMyHealthGraphics();
     /* ------------------------------------------- */
     std::cout << "-------------------------------------------" << std::endl;
     showGreetingMessage();
@@ -259,6 +263,25 @@ void testGetMyEntertainmentGraphics() {
     testArr[4] = 2700.8;
     double* ptr_testArr = testArr;
     char* resultArray = getMyEntertainmentGraphics(ptr_testArr);
+    char expected = 'X';
+    if (resultArray[0] == expected) {
+        std::cout << "PASSED" << std::endl;
+    }
+    else {
+        std::cout << "NOT PASSED" << std::endl;
+    }
+    delete[] testArr;
+}
+
+void testGetMyHealthGraphics() {
+    double* testArr = new double[5];
+    testArr[0] = 23.5;
+    testArr[1] = 1200.5;
+    testArr[2] = 2300.7;
+    testArr[3] = 2500.8;
+    testArr[4] = 2700.8;
+    double* ptr_testArr = testArr;
+    char* resultArray = getMyHealthGraphics(ptr_testArr);
     char expected = 'X';
     if (resultArray[0] == expected) {
         std::cout << "PASSED" << std::endl;
