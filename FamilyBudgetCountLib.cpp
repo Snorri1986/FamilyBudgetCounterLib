@@ -7,6 +7,7 @@ char * getIncomeGraphics(double *incomeValues);
 char* getMyGroceriesGraphics(double* groceriesValues);
 char* getMyHousingGraphics(double* housingValues);
 char* getMyTravellingGraphics(double* travellingValues);
+char* getMyEntertainmentGraphics(double* entertainmentValues);
 void cleanMemory();
 // unit tests signatures
 void testShowGreetingMessage();
@@ -21,6 +22,7 @@ char* arrayIncomeX;
 char* arrayGroceriesX;
 char* arrayHousingX;
 char* arrayTravellingX;
+char* arrayEntertainmentX;
 
 int main()
 {
@@ -112,11 +114,26 @@ char* getMyTravellingGraphics(double* travellingValues) {
     return arrayTravellingX;
 }
 
+char* getMyEntertainmentGraphics(double* entertainmentValues) {
+    int arrLength = sizeof(entertainmentValues);
+    double sum = 0;
+    for (int i = 0;i <= arrLength;i++) {
+        sum += entertainmentValues[i];
+    }
+    int countX = static_cast<int>(std::round(sum / dividerDKK));
+    char* arrayEntertainmentX = new char[countX];
+    for (int i = 0; i <= sizeof(arrayEntertainmentX);i++) {
+        arrayEntertainmentX[i] = 'X';
+    }
+    return arrayEntertainmentX;
+}
+
 void cleanMemory() {
     delete[] arrayIncomeX;
     delete[] arrayGroceriesX;
     delete[] arrayHousingX;
     delete[] arrayTravellingX;
+    delete[] arrayEntertainmentX;
 }
 
 //TODO: add list of methods related with library
