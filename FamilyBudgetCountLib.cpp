@@ -8,6 +8,7 @@ char* getMyGroceriesGraphics(double* groceriesValues);
 char* getMyHousingGraphics(double* housingValues);
 char* getMyTravellingGraphics(double* travellingValues);
 char* getMyEntertainmentGraphics(double* entertainmentValues);
+char* getMyHealthGraphics(double* healthValues);
 void cleanMemory();
 // unit tests signatures
 void testShowGreetingMessage();
@@ -24,6 +25,7 @@ char* arrayGroceriesX;
 char* arrayHousingX;
 char* arrayTravellingX;
 char* arrayEntertainmentX;
+char* arrayHealthX;
 
 int main()
 {
@@ -130,6 +132,20 @@ char* getMyEntertainmentGraphics(double* entertainmentValues) {
         arrayEntertainmentX[i] = 'X';
     }
     return arrayEntertainmentX;
+}
+
+char* getMyHealthGraphics(double* healthValues) {
+    int arrLength = sizeof(healthValues);
+    double sum = 0;
+    for (int i = 0;i <= arrLength;i++) {
+        sum += healthValues[i];
+    }
+    int countX = static_cast<int>(std::round(sum / dividerDKK));
+    char* arrayHealthX = new char[countX];
+    for (int i = 0; i <= sizeof(arrayHealthX);i++) {
+        arrayHealthX[i] = 'X';
+    }
+    return arrayHealthX;
 }
 
 void cleanMemory() {
