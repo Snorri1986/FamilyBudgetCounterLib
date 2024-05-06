@@ -85,7 +85,8 @@ char * getIncomeGraphics(double *incomeValues) {
     }
     int countX = static_cast<int>(std::round(sum/dividerDKK));
     char* arrayIncomeX = new char[countX]; 
-   for (int i = 0; i <= sizeof(arrayIncomeX);i++) {
+    int arrSize = sizeof(arrayIncomeX);
+    for (int i = 0; i <= arrSize;i++) {
       arrayIncomeX[i] = 'X';
    }
    return arrayIncomeX;
