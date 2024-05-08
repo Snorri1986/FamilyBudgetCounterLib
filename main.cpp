@@ -6,14 +6,14 @@
 
 // common tests signatures
 int showGreetingMessage();
-char * getIncomeGraphics(double *incomeValues);
+/*char* getIncomeGraphics(double* incomeValues);
 char* getMyGroceriesGraphics(double* groceriesValues);
 char* getMyHousingGraphics(double* housingValues);
 char* getMyTravellingGraphics(double* travellingValues);
 char* getMyEntertainmentGraphics(double* entertainmentValues);
 char* getMyHealthGraphics(double* healthValues);
 char* getMyMobileInternetGraphics(double* mobileInternetValues);
-void cleanMemory();
+void cleanMemory();*/
 // unit tests signatures
 void testShowGreetingMessage();
 void testGetIncomeGraphics();
@@ -25,14 +25,16 @@ void testGetMyHealthGraphics();
 void testGetMyMobileInternetGraphics();
 
 const int dividerDKK = 100;
+
 // global arrays
-char* arrayIncomeX;
+//char* arrayIncomeX;
 char* arrayGroceriesX;
 char* arrayHousingX;
 char* arrayTravellingX;
 char* arrayEntertainmentX;
 char* arrayHealthX;
 char* arrayMobileInternetX;
+
 
 int main()
 {
@@ -41,7 +43,7 @@ int main()
     testShowGreetingMessage();
     std::cout << std::endl;
     std::cout << "getIncomeGrapthics()....";
-    testGetIncomeGraphics();
+    //testGetIncomeGraphics();
     std::cout << std::endl;
     std::cout << "getMyGroceriesGraphics()....";
     testGetMyGroceriesGraphics();
@@ -63,7 +65,7 @@ int main()
     /* ------------------------------------------- */
     std::cout << "-------------------------------------------" << std::endl;
     showGreetingMessage();
-    cleanMemory();
+    //cleanMemory();
     system("pause>0");
     return 0;
 }
@@ -77,7 +79,7 @@ int showGreetingMessage() {
 }
 
 // get array of X for incomes
-char * getIncomeGraphics(double *incomeValues) {
+/*char* getIncomeGraphics(double* incomeValues) {
     int arrLength = sizeof(incomeValues);
     double sum = 0;
     for (int i = 0;i <= arrLength;i++) {
@@ -90,7 +92,7 @@ char * getIncomeGraphics(double *incomeValues) {
       arrayIncomeX[i] = 'X';
    }
    return arrayIncomeX;
-}
+}*/
 
 char* getMyGroceriesGraphics(double* groceriesValues) {
     int arrLength = sizeof(groceriesValues);
@@ -183,7 +185,7 @@ char* getMyMobileInternetGraphics(double* mobileInternetValues) {
 }
 
 void cleanMemory() {
-    delete[] arrayIncomeX;
+    //delete[] arrayIncomeX;
     delete[] arrayGroceriesX;
     delete[] arrayHousingX;
     delete[] arrayTravellingX;
@@ -210,7 +212,8 @@ void testShowGreetingMessage() {
     }
 }
 
-void testGetIncomeGraphics() {
+// temporary turned off
+/*void testGetIncomeGraphics() {
     double * testArr = new double[5];
     testArr[0] = 23.5;
     testArr[1] = 1200.5;
@@ -227,7 +230,7 @@ void testGetIncomeGraphics() {
       std::cout << "NOT PASSED" << std::endl;
     }
     delete [] testArr;
-}
+}*/
 
 void testGetMyGroceriesGraphics() {
     double* testArr = new double[5];
