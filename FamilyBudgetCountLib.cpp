@@ -1,3 +1,6 @@
+// This is an independent project of an individual developer. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
+
 #include <iostream>
 #include <cmath> 
 
@@ -82,7 +85,8 @@ char * getIncomeGraphics(double *incomeValues) {
     }
     int countX = static_cast<int>(std::round(sum/dividerDKK));
     char* arrayIncomeX = new char[countX]; 
-   for (int i = 0; i <= sizeof(arrayIncomeX);i++) {
+    int arrSize = sizeof(arrayIncomeX);
+    for (int i = 0; i <= arrSize;i++) {
       arrayIncomeX[i] = 'X';
    }
    return arrayIncomeX;
@@ -96,7 +100,8 @@ char* getMyGroceriesGraphics(double* groceriesValues) {
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayGroceriesX = new char[countX];
-    for (int i = 0; i <= sizeof(arrayGroceriesX);i++) {
+    int arrSize = sizeof(arrayGroceriesX);
+    for (int i = 0; i <= arrSize;i++) {
         arrayGroceriesX[i] = 'X';
     }
     return arrayGroceriesX;
@@ -110,7 +115,8 @@ char* getMyHousingGraphics(double* housingValues) {
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayHousingX = new char[countX];
-    for (int i = 0; i <= sizeof(arrayHousingX);i++) {
+    int arrSize = sizeof(arrayHousingX);
+    for (int i = 0; i <= arrSize;i++) {
         arrayHousingX[i] = 'X';
     }
     return arrayHousingX;
@@ -124,7 +130,8 @@ char* getMyTravellingGraphics(double* travellingValues) {
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayTravellingX = new char[countX];
-    for (int i = 0; i <= sizeof(arrayTravellingX);i++) {
+    int arrSize = sizeof(arrayTravellingX);
+    for (int i = 0; i <= arrSize;i++) {
         arrayTravellingX[i] = 'X';
     }
     return arrayTravellingX;
@@ -138,7 +145,8 @@ char* getMyEntertainmentGraphics(double* entertainmentValues) {
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayEntertainmentX = new char[countX];
-    for (int i = 0; i <= sizeof(arrayEntertainmentX);i++) {
+    int arrSize = sizeof(arrayEntertainmentX);
+    for (int i = 0; i <= arrSize;i++) {
         arrayEntertainmentX[i] = 'X';
     }
     return arrayEntertainmentX;
@@ -152,7 +160,8 @@ char* getMyHealthGraphics(double* healthValues) {
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayHealthX = new char[countX];
-    for (int i = 0; i <= sizeof(arrayHealthX);i++) {
+    int arrSize = sizeof(arrayHealthX);
+    for (int i = 0; i <= arrSize;i++) {
         arrayHealthX[i] = 'X';
     }
     return arrayHealthX;
@@ -166,7 +175,8 @@ char* getMyMobileInternetGraphics(double* mobileInternetValues) {
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayMobileInternetX = new char[countX];
-    for (int i = 0; i <= sizeof(arrayMobileInternetX);i++) {
+    int arrSize = sizeof(arrayMobileInternetX);
+    for (int i = 0; i <= arrSize;i++) {
         arrayMobileInternetX[i] = 'X';
     }
     return arrayMobileInternetX;
