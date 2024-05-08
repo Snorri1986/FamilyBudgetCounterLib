@@ -192,7 +192,7 @@ void cleanMemory() {
     delete[] arrayMobileInternetX;
 }
 
-//TODO: add list of methods related with library
+
 
 /* ------------------------------------------- */
 
