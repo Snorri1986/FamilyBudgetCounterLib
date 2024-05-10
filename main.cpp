@@ -2,8 +2,7 @@
 // PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
 
 #include <iostream>
-#include <cmath>
-#include "functionslib.cpp"
+#include "functionslib.h"
 
 // common tests signatures
 int showGreetingMessage();
