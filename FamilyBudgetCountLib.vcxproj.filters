@@ -31,4 +31,7 @@
     <Text Include="rest_example.txt" />
     <Text Include="CMakeLists.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="vcpkg.cmake" />
+  </ItemGroup>
 </Project>
