@@ -137,6 +137,9 @@
   <ItemGroup>
     <ClInclude Include="functionslib.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="rest_example.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
