@@ -141,6 +141,9 @@
     <Text Include="CMakeLists.txt" />
     <Text Include="rest_example.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakePresets.json" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
