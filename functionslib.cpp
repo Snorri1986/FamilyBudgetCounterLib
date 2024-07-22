@@ -25,12 +25,18 @@ char* arrayHealthX;
 char* arrayMobileInternetX;
 
 char* getIncomeGraphics(double* incomeValues) {
-    int arrLength = sizeof(incomeValues);
+    //int arrLength = sizeof(incomeValues);
+    size_t arrLength = sizeof(incomeValues) / sizeof(incomeValues[0]);
+    //std::cout << "arrLength: " << arrLength;
     double sum = 0;
     for (int i = 0;i <= arrLength;i++) {
         sum += incomeValues[i];
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
+    std::cout << "Sum: " << sum;
+    if (countX <= 0) {
+        std::cerr << "Error: Invalid array size." << std::endl;
+    }
     char* arrayIncomeX = new char[countX];
     int arrSize = sizeof(arrayIncomeX);
     for (int i = 0; i <= arrSize;i++) {

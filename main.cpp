@@ -76,14 +76,19 @@ void testShowGreetingMessage() {
 
 
 void testGetIncomeGraphics() {
-    double * testArr = new double[5];
-    testArr[0] = 23.5;
-    testArr[1] = 1200.5;
-    testArr[2] = 2300.7;
-    testArr[3] = 2500.8;
-    testArr[4] = 2700.8;
-    double * ptr_testArr = testArr;
-    char * resultArray = getIncomeGraphics(ptr_testArr);
+    //double * testArr = new double[3];
+    //testArr[0] = 23.5;
+    //testArr[1] = 1200.5;
+    //testArr[2] = 2300.7;
+    //testArr[3] = 2500.8;
+    //testArr[4] = 2700.8;
+    double testArr[5] = { 23.5,1200.5,2300.7,2500.8,2700.8 };
+    //int arrLength = sizeof(testArr);
+    //size_t size = sizeof(testArr) / sizeof(testArr[0]); 
+    //std::cout << "Array size: " << size << std::endl;
+    //    double * ptr_testArr = testArr;
+    //char * resultArray = getIncomeGraphics(ptr_testArr);
+    char* resultArray = getIncomeGraphics(testArr);
     char expected = 'X';
     if (resultArray[0] == expected) {
        std::cout << "PASSED" << std::endl;
