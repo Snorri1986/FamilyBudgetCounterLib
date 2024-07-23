@@ -5,7 +5,7 @@
 #include <iostream>
 
 // common functions signatures
-char* getIncomeGraphics(double* incomeValues);
+char* getIncomeGraphics(double* incomeValues,int size);
 char* getMyGroceriesGraphics(double* groceriesValues);
 char* getMyHousingGraphics(double* housingValues);
 char* getMyTravellingGraphics(double* travellingValues);
@@ -24,16 +24,12 @@ char* arrayEntertainmentX;
 char* arrayHealthX;
 char* arrayMobileInternetX;
 
-char* getIncomeGraphics(double* incomeValues) {
-    //int arrLength = sizeof(incomeValues);
-    size_t arrLength = sizeof(incomeValues) / sizeof(incomeValues[0]);
-    //std::cout << "arrLength: " << arrLength;
+char* getIncomeGraphics(double* incomeValues,int size) {
     double sum = 0;
-    for (int i = 0;i <= arrLength;i++) {
+    for (int i = 0;i < size;i++) {
         sum += incomeValues[i];
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
-    std::cout << "Sum: " << sum;
     if (countX <= 0) {
         std::cerr << "Error: Invalid array size." << std::endl;
     }
