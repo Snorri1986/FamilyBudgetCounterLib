@@ -2,7 +2,7 @@
 #define FUNCTIONSLIB_H
 
 char* getIncomeGraphics(double* incomeValues,int size);
-char* getMyGroceriesGraphics(double* groceriesValues);
+char* getMyGroceriesGraphics(double* groceriesValues,int size);
 char* getMyHousingGraphics(double* housingValues);
 char* getMyTravellingGraphics(double* travellingValues);
 char* getMyEntertainmentGraphics(double* entertainmentValues);

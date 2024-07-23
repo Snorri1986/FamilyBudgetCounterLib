@@ -6,7 +6,7 @@
 
 // common functions signatures
 char* getIncomeGraphics(double* incomeValues,int size);
-char* getMyGroceriesGraphics(double* groceriesValues);
+char* getMyGroceriesGraphics(double* groceriesValues,int size);
 char* getMyHousingGraphics(double* housingValues);
 char* getMyTravellingGraphics(double* travellingValues);
 char* getMyEntertainmentGraphics(double* entertainmentValues);
@@ -41,10 +41,9 @@ char* getIncomeGraphics(double* incomeValues,int size) {
     return arrayIncomeX;
 }
 
-char* getMyGroceriesGraphics(double* groceriesValues) {
-    int arrLength = sizeof(groceriesValues);
+char* getMyGroceriesGraphics(double* groceriesValues,int size) {
     double sum = 0;
-    for (int i = 0;i <= arrLength;i++) {
+    for (int i = 0;i < size;i++) {
         sum += groceriesValues[i];
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));

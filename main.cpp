@@ -89,14 +89,9 @@ void testGetIncomeGraphics() {
 }
 
 void testGetMyGroceriesGraphics() {
-    double* testArr = new double[5];
-    testArr[0] = 23.5;
-    testArr[1] = 1200.5;
-    testArr[2] = 2300.7;
-    testArr[3] = 2500.8;
-    testArr[4] = 2700.8;
-    double* ptr_testArr = testArr;
-    char* resultArray = getMyGroceriesGraphics(ptr_testArr);
+    double testArr[5] = { 33.5, 1222.5, 2345.7, 2512.8, 2720.8 };
+    int size = sizeof(testArr) / sizeof(testArr[0]);
+    char* resultArray = getMyGroceriesGraphics(testArr,size);
     char expected = 'X';
     if (resultArray[0] == expected) {
         std::cout << "PASSED" << std::endl;
@@ -104,7 +99,6 @@ void testGetMyGroceriesGraphics() {
     else {
         std::cout << "NOT PASSED" << std::endl;
     }
-    delete[] testArr;
 }
 
 void testGetMyHousingGraphics() {
