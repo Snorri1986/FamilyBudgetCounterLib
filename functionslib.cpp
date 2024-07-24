@@ -55,10 +55,9 @@ char* getMyGroceriesGraphics(double* groceriesValues,int size) {
     return arrayGroceriesX;
 }
 
-char* getMyHousingGraphics(double* housingValues) {
-    int arrLength = sizeof(housingValues);
+char* getMyHousingGraphics(double* housingValues,int size) {
     double sum = 0;
-    for (int i = 0;i <= arrLength;i++) {
+    for (int i = 0;i < size;i++) {
         sum += housingValues[i];
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
