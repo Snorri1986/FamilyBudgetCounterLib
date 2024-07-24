@@ -69,10 +69,9 @@ char* getMyHousingGraphics(double* housingValues,int size) {
     return arrayHousingX;
 }
 
-char* getMyTravellingGraphics(double* travellingValues) {
-    int arrLength = sizeof(travellingValues);
+char* getMyTravellingGraphics(double* travellingValues,int size) {
     double sum = 0;
-    for (int i = 0;i <= arrLength;i++) {
+    for (int i = 0;i < size;i++) {
         sum += travellingValues[i];
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
