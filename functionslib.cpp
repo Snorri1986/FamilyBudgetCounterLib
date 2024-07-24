@@ -111,10 +111,9 @@ char* getMyHealthGraphics(double* healthValues,int size) {
     return arrayHealthX;
 }
 
-char* getMyMobileInternetGraphics(double* mobileInternetValues) {
-    int arrLength = sizeof(mobileInternetValues);
+char* getMyMobileInternetGraphics(double* mobileInternetValues,int size) {
     double sum = 0;
-    for (int i = 0;i <= arrLength;i++) {
+    for (int i = 0;i < size;i++) {
         sum += mobileInternetValues[i];
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
