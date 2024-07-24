@@ -126,7 +126,6 @@ char* getMyMobileInternetGraphics(double* mobileInternetValues,int size) {
 }
 
 void cleanMemory() {
-    //delete[] arrayIncomeX;
     delete[] arrayGroceriesX;
     delete[] arrayHousingX;
     delete[] arrayTravellingX;
