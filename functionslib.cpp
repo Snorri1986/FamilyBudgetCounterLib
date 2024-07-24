@@ -83,10 +83,9 @@ char* getMyTravellingGraphics(double* travellingValues,int size) {
     return arrayTravellingX;
 }
 
-char* getMyEntertainmentGraphics(double* entertainmentValues) {
-    int arrLength = sizeof(entertainmentValues);
+char* getMyEntertainmentGraphics(double* entertainmentValues,int size) {
     double sum = 0;
-    for (int i = 0;i <= arrLength;i++) {
+    for (int i = 0;i < size;i++) {
         sum += entertainmentValues[i];
     }
     int countX = static_cast<int>(std::round(sum / dividerDKK));
