@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "functionslib.h"
+#include "crow.h"
 
 // common tests signatures
 int showGreetingMessage();
