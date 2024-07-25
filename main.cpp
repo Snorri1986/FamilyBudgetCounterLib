@@ -52,7 +52,7 @@ int main()
 
     CROW_ROUTE(app, "/")
         ([]() {
-        return "Hello, world!";
+        return "FamilyBudgetAPI v1";
             });
 
     app.port(8080).multithreaded().run();
