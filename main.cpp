@@ -55,6 +55,11 @@ int main()
         return "FamilyBudgetAPI v1";
             });
 
+    CROW_ROUTE(app, "/v1/income")
+        ([]() {
+        return "Income";
+            });
+
     app.port(8080).multithreaded().run();
 
     system("pause>0");
