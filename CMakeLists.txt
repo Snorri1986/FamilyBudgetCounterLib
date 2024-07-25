@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(FamilyBudgetCountLib)
+find_package(fmt CONFIG REQUIRED)
+add_executable(FamilyBudgetCountLib main.cpp)
+target_link_libraries(FamilyBudgetCountLib "D:\Applications\libraries\crown\Crow-1.2.0-Darwin\include")
