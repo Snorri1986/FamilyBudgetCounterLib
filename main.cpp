@@ -55,9 +55,14 @@ int main()
         return "FamilyBudgetAPI v1";
             });
 
-    CROW_ROUTE(app, "/v1/income")
-        ([]() {
-        return "Income";
+    // double = sum of arrays value, int = size of array
+    CROW_ROUTE(app, "/v1/income/<double>/<int>")
+        ([](double array_sum, int arr_size) {
+        if (arr_size == 0) {
+            std::cout << "Invalid request" << std::endl;
+            return crow::response(400);
+        }
+        return crow::response("Char Array");
             });
 
     app.port(8080).multithreaded().run();
