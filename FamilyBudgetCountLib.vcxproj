@@ -142,6 +142,7 @@
     <Text Include="rest_example.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="testEndpoints.ps1" />
     <None Include="vcpkg.cmake" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
