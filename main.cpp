@@ -55,14 +55,15 @@ int main()
         return "FamilyBudgetAPI v1";
             });
 
-    // double = sum of arrays value, int = size of array
+    // double = sum of arrays value
     CROW_ROUTE(app, "/v1/income/<double>")
         ([](double array_sum) {
         if (array_sum == 0 || array_sum < 0) {
-            return crow::response(400);
+            return std::string("HTTP 400 Bad request");
         }
-        //TODO: replace
-        return crow::response("Char Array");
+        
+        char* x_array = getIncomeGraphics(array_sum);
+        return std::string(x_array);
             });
 
     app.port(8080).multithreaded().run();
