@@ -56,12 +56,13 @@ int main()
             });
 
     // double = sum of arrays value, int = size of array
-    CROW_ROUTE(app, "/v1/income/<double>/<int>")
-        ([](double array_sum, int arr_size) {
-        if (arr_size == 0) {
+    CROW_ROUTE(app, "/v1/income/<double>")
+        ([](double array_sum) {
+        if (array_sum == 0 || array_sum < 0) {
             std::cout << "Invalid request" << std::endl;
             return crow::response(400);
         }
+        //TODO: replace
         return crow::response("Char Array");
             });
 
@@ -98,8 +99,13 @@ void testShowGreetingMessage() {
 
 void testGetIncomeGraphics() {
     double testArr[5] = { 23.5, 1200.5, 2300.7, 2500.8, 2700.8 };
-    int size = sizeof(testArr) / sizeof(testArr[0]); 
-    char* resultArray = getIncomeGraphics(testArr,size);
+    int size = sizeof(testArr) / sizeof(testArr[0]);
+    double arrSum = 0;
+    for (int i = 0;i < size;i++) {
+        arrSum += testArr[i];
+    }
+    //char* resultArray = getIncomeGraphics(testArr,size);
+    char* resultArray = getIncomeGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
        std::cout << "PASSED" << std::endl;

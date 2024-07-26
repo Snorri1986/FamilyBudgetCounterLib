@@ -24,12 +24,9 @@ char* arrayEntertainmentX;
 char* arrayHealthX;
 char* arrayMobileInternetX;
 
-char* getIncomeGraphics(double* incomeValues,int size) {
-    double sum = 0;
-    for (int i = 0;i < size;i++) {
-        sum += incomeValues[i];
-    }
-    int countX = static_cast<int>(std::round(sum / dividerDKK));
+
+char* getIncomeGraphics(double arr_sum) {
+    int countX = static_cast<int>(std::round(arr_sum / dividerDKK));
     if (countX <= 0) {
         std::cerr << "Error: Invalid array size." << std::endl;
     }
