@@ -1,7 +1,7 @@
 #ifndef FUNCTIONSLIB_H  // Header guards to prevent multiple inclusion
 #define FUNCTIONSLIB_H
 
-char* getIncomeGraphics(double* incomeValues,int size);
+char* getIncomeGraphics(double arr_sum);
 char* getMyGroceriesGraphics(double* groceriesValues,int size);
 char* getMyHousingGraphics(double* housingValues,int size);
 char* getMyTravellingGraphics(double* travellingValues,int size);

@@ -52,7 +52,18 @@ int main()
 
     CROW_ROUTE(app, "/")
         ([]() {
-        return "Hello, world!";
+        return "FamilyBudgetAPI v1";
+            });
+
+    // double = sum of arrays value
+    CROW_ROUTE(app, "/v1/income/<double>")
+        ([](double array_sum) {
+        if (array_sum == 0 || array_sum < 0) {
+            return std::string("HTTP 400 Bad request");
+        }
+        
+        char* x_array = getIncomeGraphics(array_sum);
+        return std::string(x_array);
             });
 
     app.port(8080).multithreaded().run();
@@ -88,8 +99,13 @@ void testShowGreetingMessage() {
 
 void testGetIncomeGraphics() {
     double testArr[5] = { 23.5, 1200.5, 2300.7, 2500.8, 2700.8 };
-    int size = sizeof(testArr) / sizeof(testArr[0]); 
-    char* resultArray = getIncomeGraphics(testArr,size);
+    int size = sizeof(testArr) / sizeof(testArr[0]);
+    double arrSum = 0;
+    for (int i = 0;i < size;i++) {
+        arrSum += testArr[i];
+    }
+    //char* resultArray = getIncomeGraphics(testArr,size);
+    char* resultArray = getIncomeGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
        std::cout << "PASSED" << std::endl;

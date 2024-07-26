@@ -33,5 +33,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="vcpkg.cmake" />
+    <None Include="testEndpoints.ps1" />
   </ItemGroup>
 </Project>
