@@ -59,7 +59,6 @@ int main()
     CROW_ROUTE(app, "/v1/income/<double>")
         ([](double array_sum) {
         if (array_sum == 0 || array_sum < 0) {
-            std::cout << "Invalid request" << std::endl;
             return crow::response(400);
         }
         //TODO: replace
