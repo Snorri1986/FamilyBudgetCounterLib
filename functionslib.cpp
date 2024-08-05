@@ -28,12 +28,16 @@ char* getIncomeGraphics(double arr_sum) {
     return arrayIncomeX;
 }
 
-char* getMyGroceriesGraphics(double* groceriesValues,int size) {
-    double sum = 0;
-    for (int i = 0;i < size;i++) {
-        sum += groceriesValues[i];
+//char* getMyGroceriesGraphics(double* groceriesValues,int size) {
+char* getMyGroceriesGraphics(double arr_sum) {
+    //double sum = 0;
+    //for (int i = 0;i < size;i++) {
+       // sum += groceriesValues[i];
+   // }
+    int countX = static_cast<int>(std::round(arr_sum / dividerDKK));
+    if (countX <= 0) {
+        std::cerr << "Error: Invalid array size." << std::endl;
     }
-    int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayGroceriesX = new char[countX];
     int arrSize = sizeof(arrayGroceriesX);
     for (int i = 0; i <= arrSize;i++) {

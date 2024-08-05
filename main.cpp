@@ -129,7 +129,12 @@ void testGetIncomeGraphics() {
 void testGetMyGroceriesGraphics() {
     double testArr[5] = { 33.5, 1222.5, 2345.7, 2512.8, 2720.8 };
     int size = sizeof(testArr) / sizeof(testArr[0]);
-    char* resultArray = getMyGroceriesGraphics(testArr,size);
+    double arrSum = 0;
+    for (int i = 0;i < size;i++) {
+        arrSum += testArr[i];
+    }
+    //char* resultArray = getMyGroceriesGraphics(testArr,size);
+    char* resultArray = getMyGroceriesGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
         std::cout << "PASSED" << std::endl;
