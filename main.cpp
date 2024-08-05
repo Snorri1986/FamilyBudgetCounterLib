@@ -72,10 +72,9 @@ int main()
             return std::string("HTTP 400 Bad request");
         }
 
-        //char* x_array = getMyGroceriesGraphics(array_sum);
-        //return std::string(x_array);
-
-        });
+        char* x_array = getMyGroceriesGraphics(array_sum);
+        return std::string(x_array);
+            });
 
     app.port(8080).multithreaded().run();
 
