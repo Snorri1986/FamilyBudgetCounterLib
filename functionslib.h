@@ -2,7 +2,6 @@
 #define FUNCTIONSLIB_H
 
 char* getIncomeGraphics(double arr_sum);
-//char* getMyGroceriesGraphics(double* groceriesValues,int size);
 char* getMyGroceriesGraphics(double arr_sum);
 char* getMyHousingGraphics(double* housingValues,int size);
 char* getMyTravellingGraphics(double* travellingValues,int size);

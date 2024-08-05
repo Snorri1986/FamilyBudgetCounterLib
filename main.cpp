@@ -133,7 +133,6 @@ void testGetMyGroceriesGraphics() {
     for (int i = 0;i < size;i++) {
         arrSum += testArr[i];
     }
-    //char* resultArray = getMyGroceriesGraphics(testArr,size);
     char* resultArray = getMyGroceriesGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
