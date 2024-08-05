@@ -4,16 +4,6 @@
 #include <cmath>
 #include <iostream>
 
-// common functions signatures
-char* getIncomeGraphics(double* incomeValues,int size);
-char* getMyGroceriesGraphics(double* groceriesValues,int size);
-char* getMyHousingGraphics(double* housingValues);
-char* getMyTravellingGraphics(double* travellingValues);
-char* getMyEntertainmentGraphics(double* entertainmentValues);
-char* getMyHealthGraphics(double* healthValues);
-char* getMyMobileInternetGraphics(double* mobileInternetValues);
-void cleanMemory();
-
 const int dividerDKK = 100;
 // global arrays
 char* arrayIncomeX;
