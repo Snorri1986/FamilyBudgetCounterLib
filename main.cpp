@@ -66,13 +66,20 @@ int main()
         return std::string(x_array);
             });
 
+    CROW_ROUTE(app, "/v1/groceries/<double>")
+        ([](double array_sum) {
+
+        return std::string("Hello, Groceris");
+
+            });
+
     app.port(8080).multithreaded().run();
 
     system("pause>0");
     return 0;
 }
 
-// return int value needs for unit tests
+   // return int value needs for unit tests
 int showGreetingMessage() {
     std::cout << "Welcome to FamilyBudgetCounter Library" << std::endl;
     std::cout << "In a few minutes I will count all your expances and you can see result in Java application" << std::endl;
