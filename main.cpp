@@ -66,13 +66,23 @@ int main()
         return std::string(x_array);
             });
 
+    CROW_ROUTE(app, "/v1/groceries/<double>")
+        ([](double array_sum) {
+        if (array_sum == 0 || array_sum < 0) {
+            return std::string("HTTP 400 Bad request");
+        }
+
+        char* x_array = getMyGroceriesGraphics(array_sum);
+        return std::string(x_array);
+            });
+
     app.port(8080).multithreaded().run();
 
     system("pause>0");
     return 0;
 }
 
-// return int value needs for unit tests
+   // return int value needs for unit tests
 int showGreetingMessage() {
     std::cout << "Welcome to FamilyBudgetCounter Library" << std::endl;
     std::cout << "In a few minutes I will count all your expances and you can see result in Java application" << std::endl;
@@ -118,7 +128,11 @@ void testGetIncomeGraphics() {
 void testGetMyGroceriesGraphics() {
     double testArr[5] = { 33.5, 1222.5, 2345.7, 2512.8, 2720.8 };
     int size = sizeof(testArr) / sizeof(testArr[0]);
-    char* resultArray = getMyGroceriesGraphics(testArr,size);
+    double arrSum = 0;
+    for (int i = 0;i < size;i++) {
+        arrSum += testArr[i];
+    }
+    char* resultArray = getMyGroceriesGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
         std::cout << "PASSED" << std::endl;

@@ -139,7 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
-    <Text Include="rest_example.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="testEndpoints.ps1" />

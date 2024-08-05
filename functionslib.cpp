@@ -4,16 +4,6 @@
 #include <cmath>
 #include <iostream>
 
-// common functions signatures
-char* getIncomeGraphics(double* incomeValues,int size);
-char* getMyGroceriesGraphics(double* groceriesValues,int size);
-char* getMyHousingGraphics(double* housingValues);
-char* getMyTravellingGraphics(double* travellingValues);
-char* getMyEntertainmentGraphics(double* entertainmentValues);
-char* getMyHealthGraphics(double* healthValues);
-char* getMyMobileInternetGraphics(double* mobileInternetValues);
-void cleanMemory();
-
 const int dividerDKK = 100;
 // global arrays
 char* arrayIncomeX;
@@ -38,12 +28,12 @@ char* getIncomeGraphics(double arr_sum) {
     return arrayIncomeX;
 }
 
-char* getMyGroceriesGraphics(double* groceriesValues,int size) {
-    double sum = 0;
-    for (int i = 0;i < size;i++) {
-        sum += groceriesValues[i];
+
+char* getMyGroceriesGraphics(double arr_sum) {
+    int countX = static_cast<int>(std::round(arr_sum / dividerDKK));
+    if (countX <= 0) {
+        std::cerr << "Error: Invalid array size." << std::endl;
     }
-    int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayGroceriesX = new char[countX];
     int arrSize = sizeof(arrayGroceriesX);
     for (int i = 0; i <= arrSize;i++) {
