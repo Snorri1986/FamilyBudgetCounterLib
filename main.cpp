@@ -86,6 +86,11 @@ int main()
         return std::string(x_array);
         });
 
+    CROW_ROUTE(app, "/v1/travel/<double>")
+        ([](double array_sum) {
+        return std::string("Hello, travel");
+            });
+
 
     app.port(8080).multithreaded().run();
 
