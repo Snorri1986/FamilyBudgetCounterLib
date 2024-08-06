@@ -91,6 +91,9 @@ int main()
         if (array_sum == 0 || array_sum < 0) {
             return std::string("HTTP 400 Bad request");
         }
+
+        //char* x_array = getMyTravellingGraphics(array_sum);
+        //return std::string(x_array);
         
         return std::string("Hello, travel");
             });
