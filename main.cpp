@@ -82,8 +82,8 @@ int main()
             return std::string("HTTP 400 Bad request");
         }
 
-        //char* x_array = getMyHousingGraphics(array_sum);
-        //return std::string(x_array);
+        char* x_array = getMyHousingGraphics(array_sum);
+        return std::string(x_array);
         });
 
 
@@ -156,7 +156,11 @@ void testGetMyGroceriesGraphics() {
 void testGetMyHousingGraphics() {
     double testArr[5] = { 38.5, 1322.5, 2350.7, 2550.8, 2750.8 };
     int size = sizeof(testArr) / sizeof(testArr[0]);
-    char* resultArray = getMyHousingGraphics(testArr,size);
+    double arrSum = 0;
+    for (int i = 0;i < size;i++) {
+        arrSum += testArr[i];
+    }
+    char* resultArray = getMyHousingGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
         std::cout << "PASSED" << std::endl;
