@@ -98,6 +98,9 @@ int main()
 
     CROW_ROUTE(app, "/v1/entertainment/<double>")
         ([](double array_sum) {
+        if (array_sum == 0 || array_sum < 0) {
+            return std::string("HTTP 400 Bad request");
+        }
         return std::string("Hello from Entertainment");
             });
 
