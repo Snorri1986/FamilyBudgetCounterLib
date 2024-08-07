@@ -92,11 +92,9 @@ int main()
             return std::string("HTTP 400 Bad request");
         }
 
-        //char* x_array = getMyTravellingGraphics(array_sum);
-        //return std::string(x_array);
-        
-        return std::string("Hello, travel");
-            });
+        char* x_array = getMyTravellingGraphics(array_sum);
+        return std::string(x_array);
+        });
 
 
     app.port(8080).multithreaded().run();
@@ -137,7 +135,6 @@ void testGetIncomeGraphics() {
     for (int i = 0;i < size;i++) {
         arrSum += testArr[i];
     }
-    //char* resultArray = getIncomeGraphics(testArr,size);
     char* resultArray = getIncomeGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
@@ -185,7 +182,12 @@ void testGetMyHousingGraphics() {
 void testGetMyTravellingGraphics() {
     double testArr[5] = { 40.5, 1400.5, 2370.7, 2570.8, 2800.8 };
     int size = sizeof(testArr) / sizeof(testArr[0]);
-    char* resultArray = getMyTravellingGraphics(testArr,size);
+    double arrSum = 0;
+    for (int i = 0;i < size;i++) {
+        arrSum += testArr[i];
+    }
+    //char* resultArray = getMyTravellingGraphics(testArr,size);
+    char* resultArray = getMyTravellingGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
         std::cout << "PASSED" << std::endl;
