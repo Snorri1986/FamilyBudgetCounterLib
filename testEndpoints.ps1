@@ -24,3 +24,9 @@ curl -v http://localhost:8080/v1/travel/123.3
 echo -------------------------------------------
 echo http://localhost:8080/v1/travel/-11
 curl -v http://localhost:8080/v1/travel/-11
+# v1/entertainment/<double>
+echo curl -v http://localhost:8080/v1/entertainment/123.3
+curl -v http://localhost:8080/v1/entertainment/123.3
+echo -------------------------------------------
+echo http://localhost:8080/v1/entertainment/-11
+curl -v http://localhost:8080/v1/entertainment/-11

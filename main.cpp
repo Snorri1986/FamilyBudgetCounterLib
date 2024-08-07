@@ -96,6 +96,14 @@ int main()
         return std::string(x_array);
         });
 
+    CROW_ROUTE(app, "/v1/entertainment/<double>")
+        ([](double array_sum) {
+        if (array_sum == 0 || array_sum < 0) {
+            return std::string("HTTP 400 Bad request");
+        }
+        char* x_array = getMyEntertainmentGraphics(array_sum);
+        return std::string(x_array);
+        });
 
     app.port(8080).multithreaded().run();
 
@@ -186,7 +194,6 @@ void testGetMyTravellingGraphics() {
     for (int i = 0;i < size;i++) {
         arrSum += testArr[i];
     }
-    //char* resultArray = getMyTravellingGraphics(testArr,size);
     char* resultArray = getMyTravellingGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
@@ -200,7 +207,11 @@ void testGetMyTravellingGraphics() {
 void testGetMyEntertainmentGraphics() {
     double testArr[5] = { 44.5, 1500.5, 2400.7, 2700.8, 3000.8 };
     int size = sizeof(testArr) / sizeof(testArr[0]);
-    char* resultArray = getMyEntertainmentGraphics(testArr,size);
+    double arrSum = 0;
+    for (int i = 0;i < size;i++) {
+        arrSum += testArr[i];
+    }
+    char* resultArray = getMyEntertainmentGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
         std::cout << "PASSED" << std::endl;

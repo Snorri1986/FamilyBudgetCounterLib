@@ -69,12 +69,12 @@ char* getMyTravellingGraphics(double arr_sum) {
     return arrayTravellingX;
 }
 
-char* getMyEntertainmentGraphics(double* entertainmentValues,int size) {
-    double sum = 0;
-    for (int i = 0;i < size;i++) {
-        sum += entertainmentValues[i];
+
+char* getMyEntertainmentGraphics(double arr_sum) {
+    int countX = static_cast<int>(std::round(arr_sum / dividerDKK));
+    if (countX <= 0) {
+        std::cerr << "Error: Invalid array size." << std::endl;
     }
-    int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayEntertainmentX = new char[countX];
     int arrSize = sizeof(arrayEntertainmentX);
     for (int i = 0; i <= arrSize;i++) {
