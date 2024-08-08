@@ -83,12 +83,11 @@ char* getMyEntertainmentGraphics(double arr_sum) {
     return arrayEntertainmentX;
 }
 
-char* getMyHealthGraphics(double* healthValues,int size) {
-    double sum = 0;
-    for (int i = 0;i < size;i++) {
-        sum += healthValues[i];
+char* getMyHealthGraphics(double arr_sum) {
+    int countX = static_cast<int>(std::round(arr_sum / dividerDKK));
+    if (countX <= 0) {
+        std::cerr << "Error: Invalid array size." << std::endl;
     }
-    int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayHealthX = new char[countX];
     int arrSize = sizeof(arrayHealthX);
     for (int i = 0; i <= arrSize;i++) {
