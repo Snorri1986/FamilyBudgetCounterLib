@@ -30,3 +30,9 @@ curl -v http://localhost:8080/v1/entertainment/123.3
 echo -------------------------------------------
 echo http://localhost:8080/v1/entertainment/-11
 curl -v http://localhost:8080/v1/entertainment/-11
+# v1/health/<double>
+echo curl -v http://localhost:8080/v1/health/123.3
+curl -v http://localhost:8080/v1/health/123.3
+echo -------------------------------------------
+echo http://localhost:8080/v1/health/-11
+curl -v http://localhost:8080/v1/health/-11
