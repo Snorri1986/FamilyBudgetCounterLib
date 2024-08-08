@@ -6,7 +6,7 @@ char* getMyGroceriesGraphics(double arr_sum);
 char* getMyHousingGraphics(double arr_sum);
 char* getMyTravellingGraphics(double arr_sum);
 char* getMyEntertainmentGraphics(double arr_sum);
-char* getMyHealthGraphics(double* healthValues,int size);
+char* getMyHealthGraphics(double arr_sum);
 char* getMyMobileInternetGraphics(double* mobileInternetValues,int size);
 void cleanMemory();
 
