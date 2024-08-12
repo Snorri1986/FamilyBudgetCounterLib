@@ -96,12 +96,11 @@ char* getMyHealthGraphics(double arr_sum) {
     return arrayHealthX;
 }
 
-char* getMyMobileInternetGraphics(double* mobileInternetValues,int size) {
-    double sum = 0;
-    for (int i = 0;i < size;i++) {
-        sum += mobileInternetValues[i];
+char* getMyMobileInternetGraphics(double arr_sum) {
+    int countX = static_cast<int>(std::round(arr_sum / dividerDKK));
+    if (countX <= 0) {
+        std::cerr << "Error: Invalid array size." << std::endl;
     }
-    int countX = static_cast<int>(std::round(sum / dividerDKK));
     char* arrayMobileInternetX = new char[countX];
     int arrSize = sizeof(arrayMobileInternetX);
     for (int i = 0; i <= arrSize;i++) {

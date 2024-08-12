@@ -114,6 +114,15 @@ int main()
         return std::string(x_array);
         });
 
+    CROW_ROUTE(app, "/v1/telecom/<double>")
+        ([](double array_sum) {
+        if (array_sum == 0 || array_sum < 0) {
+            return std::string("HTTP 400 Bad request");
+        }
+        char* x_array = getMyMobileInternetGraphics(array_sum);
+        return std::string(x_array);
+        });
+
     app.port(8080).multithreaded().run();
 
     system("pause>0");
@@ -250,7 +259,11 @@ void testGetMyHealthGraphics() {
 void testGetMyMobileInternetGraphics() {
     double testArr[5] = { 52.5, 1600.5, 2700.7, 2800.8, 3200.8 };
     int size = sizeof(testArr) / sizeof(testArr[0]);
-    char* resultArray = getMyMobileInternetGraphics(testArr,size);
+    double arrSum = 0;
+    for (int i = 0;i < size;i++) {
+        arrSum += testArr[i];
+    }
+    char* resultArray = getMyMobileInternetGraphics(arrSum);
     char expected = 'X';
     if (resultArray[0] == expected) {
         std::cout << "PASSED" << std::endl;
