@@ -54,3 +54,12 @@ curl -v http://localhost:8080/v1/health/0
 echo -------------------------------------------
 echo http://localhost:8080/v1/health/-11
 curl -v http://localhost:8080/v1/health/-11
+# v1/telecom/<double>
+echo curl -v http://localhost:8080/v1/telecom/123.3
+curl -v http://localhost:8080/v1/telecom/123.3
+echo -------------------------------------------
+echo curl -v http://localhost:8080/v1/telecom/0
+curl -v http://localhost:8080/v1/telecom/0
+echo -------------------------------------------
+echo http://localhost:8080/v1/telecom/-11
+curl -v http://localhost:8080/v1/telecom/-11
