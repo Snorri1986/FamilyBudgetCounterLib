@@ -142,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
+    <None Include="Procfile" />
     <None Include="testEndpoints.ps1" />
     <None Include="vcpkg.cmake" />
   </ItemGroup>

@@ -34,5 +34,6 @@
     <None Include="vcpkg.cmake" />
     <None Include="testEndpoints.ps1" />
     <None Include="Makefile" />
+    <None Include="Procfile" />
   </ItemGroup>
 </Project>
