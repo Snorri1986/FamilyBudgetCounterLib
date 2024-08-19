@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -std=c++11 -g
 LDFLAGS = 
 SRC_DIR = src
 OBJ_DIR = obj
-TARGET = myapp
+TARGET = FamilyBudgetCountLib
 
 # Source and object files
 SRCS = $(wildcard $(SRC_DIR)/*.cpp)
