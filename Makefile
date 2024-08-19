@@ -1,5 +1,5 @@
 # Variables
-CXX = g++
+CC = g++
 CXXFLAGS = -Wall -std=c++11 -g
 LDFLAGS = 
 SRC_DIR = src
@@ -7,8 +7,9 @@ OBJ_DIR = obj
 TARGET = FamilyBudgetCountLib
 
 # Source and object files
-SRCS = $(wildcard $(SRC_DIR)/*.cpp)
-OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
+SRCS = functionslib.cpp main.cpp 
+OBJS = $(SRCS:.cpp=.o)
+
 
 # Default target
 all: $(TARGET)
