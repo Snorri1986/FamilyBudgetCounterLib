@@ -141,6 +141,7 @@
     <Text Include="CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Makefile" />
     <None Include="testEndpoints.ps1" />
     <None Include="vcpkg.cmake" />
   </ItemGroup>
