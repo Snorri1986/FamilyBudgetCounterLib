@@ -1,7 +1,7 @@
 # Variables
 CC = g++
 #CXXFLAGS = -Wall -std=c++11 -g
-CXXFLAGS = -std=c++11 -Wall -I ./crow
+CXXFLAGS = -std=c++11 -Wall -I./crow
 LDFLAGS = 
 SRC_DIR = src
 OBJ_DIR = obj
@@ -11,6 +11,9 @@ TARGET = FamilyBudgetCountLib
 # Source and object files
 SRCS = functionslib.cpp main.cpp 
 OBJS = $(SRCS:.cpp=.o)
+
+# Libraries to link (Crow may depend on Boost and pthread)
+LIBS = -lboost_system -lpthread
 
 # Default target
 all: $(TARGET)
