@@ -4,9 +4,9 @@
 #include <vector>
 #include <sstream>
 
-#include "crow/http_request.h"
-#include "crow/returnable.h"
-#include "crow/ci_map.h"
+#include "http_request.h"
+#include "returnable.h"
+#include "ci_map.h"
 
 namespace crow
 {

@@ -9,14 +9,14 @@
 #include <algorithm>
 #include <type_traits>
 
-#include "crow/common.h"
-#include "crow/http_response.h"
-#include "crow/http_request.h"
-#include "crow/utility.h"
-#include "crow/logging.h"
-#include "crow/websocket.h"
-#include "crow/mustache.h"
-#include "crow/middleware.h"
+#include "common.h"
+#include "http_response.h"
+#include "http_request.h"
+#include "utility.h"
+#include "logging.h"
+#include "websocket.h"
+#include "mustache.h"
+#include "middleware.h"
 
 namespace crow // NOTE: Already documented in "crow/app.h"
 {
