@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "functionslib.h"
-#include "crow.h"
+#include "crow/crow.h"
 #include "crow/query_string.h"
 
 // common tests signatures
