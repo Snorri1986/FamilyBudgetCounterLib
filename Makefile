@@ -5,7 +5,7 @@ LDFLAGS =
 SRC_DIR = src
 OBJ_DIR = obj
 TARGET = FamilyBudgetCountLib
-INCLUDES = -I./crow.h
+INCLUDES = -I ./crow.h
 
 # Source and object files
 SRCS = functionslib.cpp main.cpp 
