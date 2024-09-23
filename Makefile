@@ -1,11 +1,12 @@
 # Variables
 CC = g++
-CXXFLAGS = -Wall -std=c++11 -g
+#CXXFLAGS = -Wall -std=c++11 -g
+CXXFLAGS = -std=c++11 -Wall -I ./crow
 LDFLAGS = 
 SRC_DIR = src
 OBJ_DIR = obj
 TARGET = FamilyBudgetCountLib
-INCLUDES = -I ./crow
+#INCLUDES = -I ./crow
 
 # Source and object files
 SRCS = functionslib.cpp main.cpp 
