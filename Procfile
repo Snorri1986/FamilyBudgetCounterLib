@@ -1,1 +1,1 @@
-web: ./FamilyBudgetCountLib.exe
+web: dotnet ./FamilyBudgetCountLib.dll
