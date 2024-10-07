@@ -4,6 +4,8 @@
 #include <iostream>
 #include "functionslib.h"
 #include <crow.h>
+#include <cstdlib>
+#include <string>
 
 
 // common tests signatures
@@ -21,6 +23,11 @@ void testGetMyMobileInternetGraphics();
 
 int main()
 {
+    // needs to Heroku Cloud
+    const char* port = std::getenv("PORT");
+    std::string port_str = port ? port : "8080";
+    std::cout << "Binding to port: " << port_str << std::endl;
+    
     std::cout << "Unit tests...." << std::endl;
     std::cout << "showGreetingMessage()....";
     testShowGreetingMessage();
