@@ -1,1 +1,1 @@
-worker: ./FamilyBudgetCountLib
+web: ./FamilyBudgetCountLib
