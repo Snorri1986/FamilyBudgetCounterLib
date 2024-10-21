@@ -35,5 +35,6 @@
     <None Include="testEndpoints.ps1" />
     <None Include="Makefile" />
     <None Include="Procfile" />
+    <None Include="Dockerfile" />
   </ItemGroup>
 </Project>

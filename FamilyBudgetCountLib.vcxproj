@@ -141,6 +141,7 @@
     <Text Include="CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Dockerfile" />
     <None Include="Makefile" />
     <None Include="Procfile" />
     <None Include="testEndpoints.ps1" />
