@@ -7,9 +7,11 @@ WORKDIR /usr/src/app
 # Copy the current directory contents into the container
 COPY . .
 
-# Crow library
 # RUN apt-get update && apt-get install -y git cmake libboost-all-dev
+# Crow library
 RUN git clone https://github.com/CrowCpp/crow.git /usr/src/crow
+# ASION lib
+RUN apt-get install -y asio-dev
 
 # Compile the C++ program
 RUN g++ -I /usr/src/crow/include -o FamilyBudgetCountLib main.cpp
