@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Crow library
-RUN apt-get update && apt-get install -y git cmake libboost-all-dev
+# RUN apt-get update && apt-get install -y git cmake libboost-all-dev
 RUN git clone https://github.com/CrowCpp/crow.git /usr/src/crow
 
 # Compile the C++ program
