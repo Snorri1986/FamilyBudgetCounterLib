@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Compile the C++ program
-RUN g++ -o main.cpp
+RUN g++ -o  FamilyBudgetCountLib main.cpp
 
 # Specify the command to run the executable
 CMD ["./FamilyBudgetCountLib"]
