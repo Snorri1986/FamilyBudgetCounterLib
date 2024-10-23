@@ -15,11 +15,13 @@ RUN apt-get update && apt-get install -y \
     cmake \
     libboost-system-dev \
     libboost-thread-dev \
-    libboost-filesystem-dev 
+    libboost-filesystem-dev \
+    libboost-dev
     
 
 # Compile the C++ program
-RUN g++ -I /usr/src/crow/include -o FamilyBudgetCountLib main.cpp
+#RUN g++ -I /usr/src/crow/include -o FamilyBudgetCountLib main.cpp
+RUN g++ -I/usr/src/crow/include -I/usr/include/boost -o FamilyBudgetCountLib main.cpp -lboost_system -lboost_thread -lboost_filesystem
 
 # Specify the command to run the executable
 CMD ["./FamilyBudgetCountLib"]
