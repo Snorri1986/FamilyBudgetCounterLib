@@ -11,7 +11,7 @@ COPY . .
 # Crow library
 RUN git clone https://github.com/CrowCpp/crow.git /usr/src/crow
 # ASION lib
-RUN apt-get install -y asio-dev
+RUN apt-get install -y libboost-all-dev
 
 # Compile the C++ program
 RUN g++ -I /usr/src/crow/include -o FamilyBudgetCountLib main.cpp
