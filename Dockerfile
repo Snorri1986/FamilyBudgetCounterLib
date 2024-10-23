@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
 
 # Compile the C++ program
 #RUN g++ -I /usr/src/crow/include -o FamilyBudgetCountLib main.cpp
-RUN g++ -I/usr/src/crow/include -I/usr/include/boost -o FamilyBudgetCountLib main.cpp -lboost_system -lboost_thread -lboost_filesystem -DCROW_USE_BOOST
+RUN g++ -I/usr/src/crow/include -I/usr/include/boost -o FamilyBudgetCountLib main.cpp functionslib.cpp -lboost_system -lboost_thread -lboost_filesystem -DCROW_USE_BOOST
 
 # Specify the command to run the executable
 CMD ["./FamilyBudgetCountLib"]
