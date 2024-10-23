@@ -10,8 +10,13 @@ COPY . .
 # RUN apt-get update && apt-get install -y git cmake libboost-all-dev
 # Crow library
 RUN git clone https://github.com/CrowCpp/crow.git /usr/src/crow
-# ASION lib
-RUN apt-get install -y libboost-all-dev
+RUN apt-get update && apt-get install -y \
+    git \
+    cmake \
+    libboost-system-dev \
+    libboost-thread-dev \
+    libboost-filesystem-dev \
+    libboost-asio-dev
 
 # Compile the C++ program
 RUN g++ -I /usr/src/crow/include -o FamilyBudgetCountLib main.cpp
