@@ -17,6 +17,9 @@ RUN apt-get update && apt-get install -y \
     libboost-thread-dev \
     libboost-filesystem-dev \
     libboost-dev
+
+# open port for API
+EXPOSE 8000
     
 
 # Compile the C++ program
