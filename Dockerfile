@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
     libboost-dev
 
 # open port for API
-EXPOSE 8000
+EXPOSE 8080
     
 
 # Compile the C++ program
